@@ -1,6 +1,6 @@
-const { resolve } = require("node:path");
+const { resolve } = require('node:path')
 
-const project = resolve(process.cwd(), "tsconfig.json");
+const project = resolve(process.cwd(), 'tsconfig.json')
 
 /*
  * This is a custom ESLint configuration for use a library
@@ -13,27 +13,38 @@ const project = resolve(process.cwd(), "tsconfig.json");
 
 module.exports = {
   extends: [
-    "@vercel/style-guide/eslint/browser",
-    "@vercel/style-guide/eslint/typescript",
-    "@vercel/style-guide/eslint/react",
+    '@vercel/style-guide/eslint/browser',
+    '@vercel/style-guide/eslint/typescript',
+    '@vercel/style-guide/eslint/react'
   ].map(require.resolve),
   parserOptions: {
-    project,
+    project
   },
   globals: {
-    JSX: true,
+    JSX: true
   },
-  plugins: ["only-warn"],
+  plugins: ['only-warn'],
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       typescript: {
-        project,
-      },
-    },
+        project
+      }
+    }
   },
-  ignorePatterns: ["node_modules/", "dist/", ".eslintrc.js", "**/*.css"],
+  ignorePatterns: ['node_modules/', 'dist/', '.eslintrc.js', '**/*.css', 'tailwind.config.ts', 'postcss.config.js'],
+
   // add rules configurations here
   rules: {
-    "import/no-default-export": "off",
-  },
-};
+    'import/no-default-export': 'off',
+    'unicorn/filename-case': ['error', { case: 'camelCase' }],
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: false, optionalDependencies: false, peerDependencies: false }
+    ],
+    '@typescript-eslint/no-misused-promises': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'react/function-component-definition': 'off',
+    'react/jsx-no-leaked-render': 'off',
+    'react-hooks/exhaustive-deps': 'off'
+  }
+}

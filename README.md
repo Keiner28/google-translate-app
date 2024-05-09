@@ -1,40 +1,60 @@
-# Turborepo kitchen sink starter
 
-This is an official starter Turborepo with multiple meta-frameworks all working in harmony and sharing packages.
+# Text Translation Application
+This monorepo contains a complete text translation application in different languages, consisting of a frontend and a backend. The frontend is a user interface that allows the user to enter text and select the source and target languages. The backend is an API that consumes the DeepL translation service to perform the requested translations.
 
-This example also shows how to use [Workspace Configurations](https://turbo.build/repo/docs/core-concepts/monorepos/configuring-workspaces).
+## Prerequisites
+- Node.js v18 or higher
 
-## Using this example
-
-Run the following command:
-
-```sh
-npx create-turbo@latest -e kitchen-sink
+## Installation and Execution
+1. Clone this repository to your local machine:
+```
+git clone https://github.com/Keiner28/google-translate-app.git
 ```
 
-## What's inside?
+2. Install the monorepo dependencies:
+```
+cd google-translate-app
+npm install
+```
 
-This Turborepo includes the following packages and apps:
+3. Start development in watch mode with Turbo Repo:
+```
+npm run dev
+```
+This command will install all the dependencies for the individual packages (frontend and backend) and start both projects simultaneously in development mode.
 
-### Apps and Packages
+The frontend will be available at `http://localhost:3001`, and the backend at `http://localhost:5001`.
 
-- `api`: an [Express](https://expressjs.com/) server
-- `storefront`: a [Next.js](https://nextjs.org/) app
-- `admin`: a [Vite](https://vitejs.dev/) single page app
-- `blog`: a [Remix](https://remix.run/) blog
-- `@repo/eslint-config`: ESLint configurations used throughout the monorepo
-- `@repo/jest-presets`: Jest configurations
-- `@repo/logger`: isomorphic logger (a small wrapper around console.log)
-- `@repo/ui`: a dummy React UI library (which contains `<CounterButton>` and `<Link>` components)
-- `@repo/typescript-config`: tsconfig.json's used throughout the monorepo
+## Monorepo Structure
+The monorepo structure is as follows:
+```
+monorepo/
+├── apps/
+│   ├── backend/
+│   ├── frontend/
+├── packages/
+│   ├── config-eslint/
+│   ├── config-typescript/
+│   └── logger/
+├── package.json
+├── README.json
+└── turbo.json
+```
+- `apps/`: Contains the frontend and backend packages of the application.
+- `apps/frontend/`: Source code for the frontend of the application.
+- `apps/backend/`: Source code for the backend (API) of the application.
+- `packages/`: Contains shared packages between the frontend and backend, such as TypeScript and ESLint configurations.
 
-Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
+## Contribution
+If you wish to contribute to this project, follow these steps:
+1. Fork this repository.
+2. Create a new branch for your contribution: `git checkout -b my-new-feature`
+3. Make your changes and commit: `git commit -am 'Add new feature'`
+4. Push your changes to the remote repository: `git push origin my-new-feature`
+5. Create a new Pull Request in this repository.
 
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Jest](https://jestjs.io) test runner for all things JavaScript
-- [Prettier](https://prettier.io) for code formatting
+## Contact
+If you have any questions, comments, or suggestions, you can contact me through:
+- Email: [keinergodinez@gmail.com](mailto:keinergodinez@gmail.com)
+- GitHub: [https://github.com/Keiner28](https://github.com/Keiner28)
+- LinkedIn: [https://www.linkedin.com/in/keiner28](https://www.linkedin.com/in/keiner28)
