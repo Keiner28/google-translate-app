@@ -8,27 +8,9 @@ This project consists of a text translation API in different languages supported
 - Node.js v20.10 or higher
 - Free DeepL account (to obtain the API key)
 
-## Installation
+## Configuration
 
-1. Clone this repository to your local machine:
-
-```
-git clone https://github.com/Keiner28/Google-Translate-Backend.git
-```
-
-2. Navigate to the project directory:
-
-```
-cd Google-Translate-Backend
-```
-
-3. Install the project dependencies:
-
-```
-npm install
-```
-
-4. Create a `.env` file in the project root and add your DeepL API key and the desired port:
+1. Create a `.env` file in the project root and add your DeepL API key and the desired port:
 
 ```
 DEEPL_NODE_API_KEY=your-deepl-api-key
