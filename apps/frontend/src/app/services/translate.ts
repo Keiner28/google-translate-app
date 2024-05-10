@@ -14,9 +14,6 @@ export interface TranslationResponse {
 
 const translateText = async ({ fromLanguage, toLanguage, text }: TranslationRequest): Promise<TranslationResponse> => {
   try {
-    // if (!fromLanguage || !toLanguage || !text) {
-    //   throw new TranslationError('Missing required parameters')
-    // }
 
     const response = await fetch(`${API_URL}/translate`, {
       method: 'POST',
