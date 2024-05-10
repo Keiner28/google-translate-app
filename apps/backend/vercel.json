@@ -6,5 +6,7 @@
       "src": "/(.*)",
       "dest": "dist/index.js"
     }
-  ]
+  ],
+  "installCommand": "npm install --prefix=../..",
+  "buildCommand": "cd ../.. && turbo run build --filter='/apps/frontend'"
 }
