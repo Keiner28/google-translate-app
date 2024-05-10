@@ -16,8 +16,9 @@ git clone https://github.com/Keiner28/google-translate-app.git
 cd google-translate-app
 npm install
 ```
+3. Create the respective `.env` files specified in the README of each project
 
-3. Start development in watch mode with Turbo Repo:
+4. Start development in watch mode with Turbo Repo:
 ```
 npm run dev
 ```

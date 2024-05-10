@@ -2,8 +2,15 @@
 
 This is the frontend of the text translation application, built with React. It provides a user-friendly interface that allows users to input text in a source language and select the target language for translation.
 
-## Directory Structure
+## Configuration
 
+1. Create a `.env` file in the root of the project and add your environment variables:
+
+```
+VITE_API_URL=your-api-url
+```
+
+## Directory Structure
 
 ```
 frontend/
@@ -23,7 +30,6 @@ frontend/
 └── README.md
 ```
 
-
 - `public/`: Directory for public files (HTML, images, etc.).
 - `src/app/`: Main directory containing application components, hooks, libraries, services, types, and utilities.
   - `src/app/components/`: Contains reusable React components of the application.
@@ -39,4 +45,3 @@ frontend/
 ## Prerequisites
 
 - Node.js
-

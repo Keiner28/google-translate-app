@@ -1,4 +1,3 @@
-
 # Text Translation API
 
 This project consists of a text translation API in different languages supported by the DeepL API. The API consumes the free DeepL service to perform text translation, which is interpreted by the translation endpoint to return a response to the frontend with the desired structure.
@@ -10,11 +9,15 @@ This project consists of a text translation API in different languages supported
 
 ## Configuration
 
-1. Create a `.env` file in the project root and add your DeepL API key and the desired port:
+1. Have a free deepl api key that you can get on the site [https://www.deepl.com/your-account/keys](https://www.deepl.com/your-account/keys)
+
+2. Create a `.env` file in the project root and add your DeepL API key and the desired port:
 
 ```
 DEEPL_NODE_API_KEY=your-deepl-api-key
 PORT=your-port
+CORS_PROD_CONFIG=your-config
+CORS_DEV_CONFIG=your-config
 ```
 
 ## API Endpoints
@@ -109,11 +112,9 @@ npm start
 
 The application will start on the port specified in the `.env` file (default: 3000).
 
-
 ## Technologies Used
 
 - Node.js
 - Express.js
 - TypeScript
 - dotenv (for managing environment variables)
-

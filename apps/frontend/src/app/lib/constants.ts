@@ -32,4 +32,4 @@ export const VOICE_FOR_LANGUAGE = {
 
 export const AUTO_LANGUAGE = 'auto'
 
-export const API_URL = import.meta.env.VITE_API_URL
+export const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001'
