@@ -16,8 +16,15 @@ This project consists of a text translation API in different languages supported
 ```
 DEEPL_NODE_API_KEY=your-deepl-api-key
 PORT=your-port
-CORS_PROD_CONFIG=your-config
-CORS_DEV_CONFIG=your-config
+
+CORS_PROD_ORIGIN = your-value
+CORS_PROD_METHODS= your-value
+CORS_PROD_ALLOWED_HEADERS= your-value
+CORS_PROD_EXPOSED_HEADERS= your-value
+
+CORS_DEV_ORIGIN= your-value
+CORS_DEV_METHODS= your-value
+CORS_DEV_ALLOWED_HEADERS= your-value
 ```
 
 ## API Endpoints
